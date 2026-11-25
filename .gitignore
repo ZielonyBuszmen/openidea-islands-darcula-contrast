@@ -5,13 +5,3 @@ dist/
 *.key
 /.openidea/
 /.idea/
-
-# Local development brief, work logs and manual test evidence.
-/OpenIDEA-Islands-Darcula-Codex-Spec.md
-/docs/FILES.md
-/docs/PORTING-NOTES.md
-/docs/VALIDATION.md
-/docs/VISUAL-CHECKLIST.md
-/docs/fixtures/
-/docs/screenshots/
-/docs/validation/

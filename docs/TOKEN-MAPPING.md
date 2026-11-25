@@ -1,8 +1,8 @@
-# Token 映射明细
+# Token mapping
 
-由 `python3 scripts/generate.py` 离线生成。`mapped` 表示原始数值已核验、角色已映射，不代表跨宿主实机视觉完全一致。`approximation` 是明确的语义近似；`derived` 为别名/宿主表达；`host-fallback` 不写入插件，继承 Islands Dark。
+Generated offline by `python3 scripts/generate.py`. `mapped` preserves a verified source value and maps its role; it does not guarantee identical rendering across hosts. `approximation` projects a source value onto a different host role; `derived` is a host expression or alias; `host-fallback` is omitted from the plugin and inherits Islands Dark.
 
-| Token | 值 | 状态 | 文件 / 键 | 说明 |
+| Token | Value | Status | File / key | Notes |
 | --- | --- | --- | --- | --- |
 | `--bg-app` | `#2b2b2b` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.*.background` |  |
 | `--bg-elev` | `#2b2b2b` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.ToolWindow.background` |  |
@@ -11,7 +11,7 @@
 | `--bg-hover` | `#393b40` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.*.hoverBackground` |  |
 | `--bg-selected` | `#304c80` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.*.selectionBackground` |  |
 | `--bg-selected-strong` | `#304c80` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.*.lightSelectionBackground` |  |
-| `--bg-current-line` | `#323232` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/CARET_ROW_COLOR` |  |
+| `--bg-current-line` | `#2b2d30` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/CARET_ROW_COLOR` |  |
 | `--bg-debug-line` | `#2d6099` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/EXECUTIONPOINT_ATTRIBUTES/BACKGROUND` |  |
 | `--bg-backdrop` | `#333333` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Popup.background` |  |
 | `--bg-input` | `#2b2b2b` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.TextField.background` |  |
@@ -27,7 +27,7 @@
 | `--fg-muted` | `#828282` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Label.infoForeground` |  |
 | `--fg-subtle` | `#777777` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Button.disabledText` |  |
 | `--fg-faint` | `#777777` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Button.disabledText` |  |
-| `--fg-gutter` | `#606366` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/LINE_NUMBERS_COLOR` |  |
+| `--fg-gutter` | `#4e5157` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/LINE_NUMBERS_COLOR` |  |
 | `--fg-icon` | `#bbbbbb` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.*.foreground` |  |
 | `--accent` | `#365880` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Button.default.startBackground` |  |
 | `--link` | `#589df6` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Link.activeForeground` |  |
@@ -45,9 +45,9 @@
 | `--vcs-untracked` | `#d1675a` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/FILESTATUS_UNKNOWN` |  |
 | `--vcs-ignored` | `#848504` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/FILESTATUS_IDEA_FILESTATUS_IGNORED` |  |
 | `--vcs-conflict` | `#d5756c` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS` |  |
-| `--gutter-modified` | `#374752` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/MODIFIED_LINES_COLOR` |  |
-| `--gutter-added` | `#384c38` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/ADDED_LINES_COLOR` |  |
-| `--gutter-deleted` | `#656e76` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/DELETED_LINES_COLOR` |  |
+| `--gutter-modified` | `#375fad` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/MODIFIED_LINES_COLOR` |  |
+| `--gutter-added` | `#549159` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/ADDED_LINES_COLOR` |  |
+| `--gutter-deleted` | `#868a91` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/DELETED_LINES_COLOR` |  |
 | `--diff-modified` | `#385570` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DIFF_MODIFIED/BACKGROUND` |  |
 | `--diff-inserted` | `#294436` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DIFF_INSERTED/BACKGROUND` |  |
 | `--diff-deleted` | `#484a4a` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DIFF_DELETED/BACKGROUND` |  |
@@ -57,9 +57,9 @@
 | `--diff-conflict-stripe` | `#8f5247` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DIFF_CONFLICT/ERROR_STRIPE_COLOR` |  |
 | `--syn-keyword` | `#cc7832` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_KEYWORD/FOREGROUND` |  |
 | `--syn-string` | `#6a8759` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_STRING/FOREGROUND` |  |
-| `--syn-type` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-type` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-function` | `#ffc66d` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_FUNCTION_DECLARATION/FOREGROUND` |  |
-| `--syn-function-call` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-function-call` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-comment` | `#808080` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_LINE_COMMENT/FOREGROUND` |  |
 | `--syn-comment-style` | `normal` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_LINE_COMMENT` | No italic FONT_TYPE; use normal. |
 | `--syn-doc-comment` | `#629755` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_DOC_COMMENT/FOREGROUND` |  |
@@ -72,38 +72,38 @@
 | `--syn-annotation` | `#bbb529` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_METADATA/FOREGROUND` |  |
 | `--syn-decorator` | `#bbb529` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_METADATA/FOREGROUND` |  |
 | `--syn-number` | `#6897bb` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_NUMBER/FOREGROUND` |  |
-| `--syn-punct` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-variable` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-global` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-namespace` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-param` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-punct` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-variable` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-global` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-namespace` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-param` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-property` | `#9876aa` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_INSTANCE_FIELD/FOREGROUND` |  |
 | `--syn-constant` | `#9876aa` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_CONSTANT/FOREGROUND` |  |
-| `--syn-python-local-variable` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-python-global-variable` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-python-local-variable` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-python-global-variable` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-instance-attribute` | `#9876aa` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_INSTANCE_FIELD/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-class-attribute` | `#9876aa` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_STATIC_FIELD/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-constant` | `#9876aa` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_CONSTANT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-property` | `#9876aa` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_INSTANCE_FIELD/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-type-parameter` | `#507874` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TYPE_PARAMETER_NAME_ATTRIBUTES/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-python-builtin` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-python-predefined-definition` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-python-predefined-usage` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-python-builtin` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-python-predefined-definition` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-python-predefined-usage` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-fstring` | `#6a8759` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_STRING/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-python-bytes` | `#6a8759` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_STRING/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-php-variable` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-php-function-call` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-builtin` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-self` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-keyword-arg` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-predefined` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-php-variable` | `#9876aa` | mapped | `sources/UPSTREAM.json` · `php_reference.observed_foregrounds.PHP_VAR` | Official PHP plugin PhpDarcula.xml: PHP_VAR and PHP_PARAMETER use #9876aa. |
+| `--syn-php-function-call` | `#ffc66d` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_FUNCTION_DECLARATION/FOREGROUND` | PHP_FUNCTION_CALL → PHP_INSTANCE_METHOD → DEFAULT_INSTANCE_METHOD → DEFAULT_FUNCTION_DECLARATION; verified in the official PHP plugin and platform fallback keys. |
+| `--syn-builtin` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-self` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-keyword-arg` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-predefined` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-escape` | `#cc7832` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_VALID_STRING_ESCAPE/FOREGROUND` |  |
 | `--syn-regexp` | `#6a8759` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_STRING/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-tag` | `#e8bf6a` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/XML_TAG_NAME/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-attribute` | `#bababa` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/XML_ATTRIBUTE_NAME/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-todo` | `#a8c023` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TODO_DEFAULT_ATTRIBUTES/FOREGROUND` |  |
 | `--syn-link` | `#589df6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/CTRL_CLICKABLE/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-markup-heading` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-markup-heading` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-markup-code` | `#6a8759` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEFAULT_STRING/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
 | `--syn-invalid` | `#ff0000` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/BAD_CHARACTER/EFFECT_COLOR` | Host invalid text foreground uses IDEA's box/effect color. |
 | `--syn-inline-value` | `#666d75` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/DEBUGGER_INLINED_VALUES/FOREGROUND` |  |
@@ -112,24 +112,24 @@
 | `--syn-rainbow-3` | `#3d7676` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/RAINBOW_COLOR2/FOREGROUND` | Corrected zero-based source index; not bracket colors. |
 | `--syn-rainbow-4` | `#be9970` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/RAINBOW_COLOR3/FOREGROUND` | Corrected zero-based source index; not bracket colors. |
 | `--syn-rainbow-5` | `#9d527c` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/RAINBOW_COLOR4/FOREGROUND` | Corrected zero-based source index; not bracket colors. |
-| `--syn-bracket-1` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-bracket-2` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--syn-bracket-3` | `#a9b7c6` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
-| `--fg-editor` | `#a9b7c6` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/FOREGROUND` |  |
+| `--syn-bracket-1` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-bracket-2` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--syn-bracket-3` | `#a9b7c6` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` | Shared host syntax category; language fallback/semantic scopes need visual calibration. |
+| `--fg-editor` | `#a9b7c6` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/FOREGROUND` |  |
 | `--caret` | `#bbbbbb` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/CARET_COLOR` |  |
-| `--fg-line-number` | `#606366` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/LINE_NUMBERS_COLOR` |  |
-| `--fg-line-number-current` | `#a4a3a3` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/LINE_NUMBER_ON_CARET_ROW_COLOR` |  |
-| `--border-gutter` | `#2b2b2b` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/BACKGROUND` | No separate gutter border in source; merge into editor surface. |
-| `--border-indent-guide` | `#373737` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/INDENT_GUIDE` |  |
-| `--border-indent-guide-active` | `#505050` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/SELECTED_INDENT_GUIDE` |  |
-| `--border-right-margin` | `#4d4d4d` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/RIGHT_MARGIN_COLOR` |  |
+| `--fg-line-number` | `#4e5157` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/LINE_NUMBERS_COLOR` |  |
+| `--fg-line-number-current` | `#9da0a8` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/LINE_NUMBER_ON_CARET_ROW_COLOR` |  |
+| `--border-gutter` | `#1e1f22` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/BACKGROUND` | No separate gutter border in source; merge into editor surface. |
+| `--border-indent-guide` | `#313438` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/INDENT_GUIDE` |  |
+| `--border-indent-guide-active` | `#6f737a` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/SELECTED_INDENT_GUIDE` |  |
+| `--border-right-margin` | `#393b40` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/RIGHT_MARGIN_COLOR` |  |
 | `--bg-editor-selection` | `#214283` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/SELECTION_BACKGROUND` |  |
 | `--bg-editor-selection-inactive` | `#4c4f56` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/SELECTION_BACKGROUND_INACTIVE` |  |
 | `--bg-text-search-result` | `#32593d` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT_SEARCH_RESULT_ATTRIBUTES/BACKGROUND` |  |
 | `--bg-text-search-result-current` | `#32593d` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT_SEARCH_RESULT_ATTRIBUTES/BACKGROUND` | No separate active occurrence background available. |
-| `--bg-matched-brace` | `#3b514d` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND` |  |
-| `--matched-brace-weight` | `700` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/MATCHED_BRACE_ATTRIBUTES/FONT_TYPE=1` |  |
-| `--bg-matched-tag` | `#3b514d` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND` | Host shares brace and tag match surfaces. |
+| `--bg-matched-brace` | `#326146` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND` |  |
+| `--matched-brace-weight` | `700` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/MATCHED_BRACE_ATTRIBUTES/FONT_TYPE=1` |  |
+| `--bg-matched-tag` | `#326146` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND` | Host shares brace and tag match surfaces. |
 | `--bg-fold-placeholder` | `#3a3a3a` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/FOLDED_TEXT_ATTRIBUTES/BACKGROUND` |  |
 | `--fg-fold-placeholder` | `#8c8c8c` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/FOLDED_TEXT_ATTRIBUTES/FOREGROUND` |  |
 | `--fg-fold-marker` | `#555555` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/TEARLINE_COLOR` |  |
@@ -140,14 +140,14 @@
 | `--fg-inlay` | `#787878` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/INLINE_PARAMETER_HINT/FOREGROUND` |  |
 | `--bg-inlay` | `#3b3b3b` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/INLINE_PARAMETER_HINT/BACKGROUND` |  |
 | `--wave-error` | `#bc3f3c` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/ERRORS_ATTRIBUTES/EFFECT_COLOR` |  |
-| `--wave-warning` | `#be9117` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/WARNING_ATTRIBUTES/ERROR_STRIPE_COLOR` | Source warning has background/stripe but no EFFECT_COLOR; use stripe for host wave. |
+| `--wave-warning` | `#be9117` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/WARNING_ATTRIBUTES/ERROR_STRIPE_COLOR` | Source warning has background/stripe but no EFFECT_COLOR; use stripe for host wave. |
 | `--editor-error-decoration` | `underline wavy var(--wave-error)` | derived | `derived` · `--wave-error` | Host renders IDEA diagnostic effects as CSS decorations. |
 | `--editor-warning-decoration` | `underline wavy var(--wave-warning)` | derived | `derived` · `--wave-warning` | Host renders IDEA diagnostic effects as CSS decorations. |
-| `--editor-warning-background` | `#52503a` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/WARNING_ATTRIBUTES/BACKGROUND` |  |
+| `--editor-warning-background` | `#3d3322` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/WARNING_ATTRIBUTES/BACKGROUND` |  |
 | `--bg-breakpoint-line` | `#3a2323` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/BREAKPOINT_ATTRIBUTES/BACKGROUND` |  |
 | `--fg-completion-match` | `#548af7` | mapped | `sources/jetbrains/expUI_dark.theme.json` · `ui.CompletionPopup.matchForeground` |  |
 | `--bg-editor-inline` | `var(--bg-editor)` | derived | `derived` · `--bg-editor` | Same host role / shared palette. |
-| `--bg-editor-banner` | `#1d3857` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/NOTIFICATION_BACKGROUND` |  |
+| `--bg-editor-banner` | `#25324d` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/NOTIFICATION_BACKGROUND` |  |
 | `--fg-weak-warning` | `#72737a` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/NOT_USED_ELEMENT_ATTRIBUTES/FOREGROUND` | No equivalent weak-warning foreground mapped. |
 | `--fg-bulb` | `#ba9752` | approximation | `sources/jetbrains/expUI_dark.theme.json` · `ui.Label.warningForeground` | Host bulb uses warning UI foreground. |
 | `--ansi-black` | `#000000` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/CONSOLE_BLACK_OUTPUT/FOREGROUND` |  |
@@ -256,6 +256,6 @@
 | `--bg-counter` | `#868a91` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Counter.background` |  |
 | `--fg-counter` | `#000000` | mapped | `sources/jetbrains/ManyIslandsDarcula.theme.json` · `ui.Counter.foreground` |  |
 | `--bg-progress-track` | `#43454a` | mapped | `sources/jetbrains/expUI_dark.theme.json` · `ui.ProgressBar.trackColor` |  |
-| `--border-method-separator` | `#4d4d4d` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/colors/METHOD_SEPARATORS_COLOR` |  |
-| `--bg-editor` | `#2b2b2b` | mapped | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/BACKGROUND` |  |
-| `--bg-editor-gutter` | `#2b2b2b` | approximation | `sources/jetbrains/DefaultColorSchemesManager.xml` · `Darcula/attributes/TEXT/BACKGROUND` | Converter uses editor background in new UI when EDITOR_GUTTER_BACKGROUND is absent; classic GUTTER_BACKGROUND is not used. |
+| `--border-method-separator` | `#43454a` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/colors/METHOD_SEPARATORS_COLOR` |  |
+| `--bg-editor` | `#1e1f22` | mapped | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/BACKGROUND` |  |
+| `--bg-editor-gutter` | `#1e1f22` | approximation | `sources/jetbrains/expUI_darculaContrastScheme.xml` · `Darcula Contrast/attributes/TEXT/BACKGROUND` | Converter uses editor background in new UI when EDITOR_GUTTER_BACKGROUND is absent; classic GUTTER_BACKGROUND is not used. |

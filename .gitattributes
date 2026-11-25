@@ -2,4 +2,3 @@
 sources/** -text
 # Upstream resources are retained verbatim, including their whitespace.
 sources/jetbrains/** -whitespace
-sources/gerry-islandsDarcula.theme.json -whitespace

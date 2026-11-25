@@ -47,8 +47,8 @@ def main():
         require(not path.is_absolute() and (ROOT / path).resolve().is_relative_to(ROOT), f"Unsafe path: {path}")
     theme = load_jsonc(ROOT / decl["path"])
     scheme = load_jsonc(ROOT / decl["editor-scheme"])
-    require(theme["id"] == "islands-darcula" and theme["kind"] == "dark", "Invalid theme identity/kind")
-    require(theme["name"] == scheme["name"] == "Islands Darcula", "Inconsistent display names")
+    require(theme["id"] == "darcula-contrast" and theme["kind"] == "dark", "Invalid theme identity/kind")
+    require(manifest["name"] == theme["name"] == scheme["name"] == "Darcula Contrast", "Inconsistent display names")
     tokens = {**theme["tokens"], **scheme["tokens"]}
     require(not (theme["tokens"].keys() & scheme["tokens"].keys()), "Accidental UI/editor override collision")
     require(len(tokens) <= 512, "Host token limit exceeded")
@@ -66,6 +66,17 @@ def main():
     }
     require(required <= tokens.keys(), f"Missing P0 tokens: {required - tokens.keys()}")
     require(tokens.keys() <= allowed, f"Unknown host tokens: {tokens.keys() - allowed}")
+    # Guard the original palette against accidental substitutions or host defaults.
+    for token, expected in {
+        "--bg-editor": "#1e1f22", "--fg-editor": "#a9b7c6",
+        "--bg-current-line": "#2b2d30", "--syn-php-variable": "#9876aa",
+        "--syn-php-function-call": "#ffc66d", "--syn-function": "#ffc66d",
+        "--syn-keyword": "#cc7832", "--syn-string": "#6a8759",
+        "--syn-number": "#6897bb", "--syn-comment": "#808080",
+        "--syn-property": "#9876aa", "--syn-constant": "#9876aa",
+    }.items():
+        require(tokens.get(token) == expected, f"Original palette mismatch: {token}")
+    print("PASS: original Darcula Contrast and PhpStorm PHP palette")
     provenance = json.loads((ROOT / "sources/token-provenance.json").read_text())
     require(tokens.keys() <= provenance.keys(), "Tokens missing provenance")
     for key, value in tokens.items():

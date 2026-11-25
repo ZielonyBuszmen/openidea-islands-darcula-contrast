@@ -1,4 +1,4 @@
-OpenIDEA Islands Darcula
+OpenIDEA Darcula Contrast (derived from Islands Darcula)
 Copyright 2026 longafter
 
 icon.svg is an original iD mark by longafter, licensed under Apache-2.0.
@@ -13,7 +13,8 @@ JetBrains/intellij-community, idea/262.10968.63,
 commit 8062c061ff33e22041d9f1844db5b8b8a6b5e4d7.
 The original resources in sources/jetbrains are unchanged. The themes/*.json
 files are modified ports: UI keys and editor attributes mapped to OpenIDEA
-tokens, with documented approximations and host defaults. They are not
+tokens, with documented approximations, host defaults, and original PHP colors.
+Darcula Contrast's overlay is applied over its original Darcula parent. They are not
 JetBrains export files or an official JetBrains product.
 
 OpenIDEA token inventory and theme structure:
@@ -25,9 +26,8 @@ Harbor Night is a format reference; its color palette is not the target.
 Third-party reference: Islands Darcula by Gerry, Apache-2.0.
 https://github.com/gerry-themes/islands-darcula
 Commit f15cd3c5a948a14e71ebcf6587dee9803f641cd3.
-The original reference JSON in sources is unchanged. Its two principal
-background colors agree with the verified JetBrains resources; final ports
-prefer the JetBrains resources wherever they differ.
+The original port consulted this reference. Its JSON is no longer bundled;
+the current theme is generated from the JetBrains resources listed above.
 
 All original contributions and these ports are licensed under Apache-2.0.
 See LICENSE, THIRD_PARTY_LICENSES.md and docs/COLOR-SOURCES.md.
