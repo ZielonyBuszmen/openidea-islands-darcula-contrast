@@ -28,7 +28,7 @@ def flatten(value, prefix=""):
     return result
 
 
-def build():
+def build(contrast=False):
     groups = read("sources/openidea-token-groups.json")
     mapping = read("sources/openidea-mapping.json")
     entries = {}
@@ -154,11 +154,14 @@ def build():
     tree = ET.parse(ROOT / scheme_source)
     schemes = {s.get("name"): s for s in tree.getroot().findall("scheme")}
     contrast_source = "sources/jetbrains/expUI_darculaContrastScheme.xml"
-    contrast = ET.parse(ROOT / contrast_source).getroot()
-    if contrast.get("name") != "Darcula Contrast" or contrast.get("parent_scheme") != "Darcula":
-        raise ValueError("Unexpected Darcula Contrast inheritance")
+    layers = [(scheme_source, schemes["Darcula"])]
+    if contrast:
+        overlay = ET.parse(ROOT / contrast_source).getroot()
+        if overlay.get("name") != "Darcula Contrast" or overlay.get("parent_scheme") != "Darcula":
+            raise ValueError("Unexpected Darcula Contrast inheritance")
+        layers.append((contrast_source, overlay))
     colors, attrs, color_origins, attr_origins = {}, {}, {}, {}
-    for source, node in [(scheme_source, schemes["Darcula"]), (contrast_source, contrast)]:
+    for source, node in layers:
         for option in node.findall("./colors/option"):
             key = option.get("name")
             colors[key] = option.get("value")
@@ -207,17 +210,18 @@ def build():
         "--syn-python-builtin": "TEXT", "--syn-python-predefined-definition": "TEXT",
         "--syn-python-predefined-usage": "TEXT", "--syn-python-fstring": "DEFAULT_STRING",
         "--syn-python-bytes": "DEFAULT_STRING",
-        "--syn-bracket-1": "TEXT",
+        "--syn-php-variable": "TEXT", "--syn-php-function-call": "TEXT", "--syn-bracket-1": "TEXT",
         "--syn-bracket-2": "TEXT", "--syn-bracket-3": "TEXT",
     }
     for token, key in syntax_roles.items():
         icls(token, key, "FOREGROUND", "approximation", "Shared host syntax category; language fallback/semantic scopes need visual calibration.")
-    php_reference = read("sources/UPSTREAM.json")["php_reference"]
-    set_token("--syn-php-variable", php_reference["observed_foregrounds"]["PHP_VAR"],
-              "sources/UPSTREAM.json", "php_reference.observed_foregrounds.PHP_VAR", "mapped",
-              "Official PHP plugin PhpDarcula.xml: PHP_VAR and PHP_PARAMETER use #9876aa.")
-    icls("--syn-php-function-call", "DEFAULT_FUNCTION_DECLARATION", "FOREGROUND", "mapped",
-         "PHP_FUNCTION_CALL → PHP_INSTANCE_METHOD → DEFAULT_INSTANCE_METHOD → DEFAULT_FUNCTION_DECLARATION; verified in the official PHP plugin and platform fallback keys.")
+    if contrast:
+        php_reference = read("sources/UPSTREAM.json")["php_reference"]
+        set_token("--syn-php-variable", php_reference["observed_foregrounds"]["PHP_VAR"],
+                  "sources/UPSTREAM.json", "php_reference.observed_foregrounds.PHP_VAR", "mapped",
+                  "Official PHP plugin PhpDarcula.xml: PHP_VAR and PHP_PARAMETER use #9876aa.")
+        icls("--syn-php-function-call", "DEFAULT_FUNCTION_DECLARATION", "FOREGROUND", "mapped",
+             "PHP_FUNCTION_CALL → PHP_INSTANCE_METHOD → DEFAULT_INSTANCE_METHOD → DEFAULT_FUNCTION_DECLARATION; verified in the official PHP plugin and platform fallback keys.")
     # The source has RAINBOW_COLOR0..4, while OpenIDEA names its five tokens 1..5.
     for index in range(5):
         icls(f"--syn-rainbow-{index + 1}", f"RAINBOW_COLOR{index}", "FOREGROUND", "mapped", "Corrected zero-based source index; not bracket colors.")
@@ -269,8 +273,10 @@ def build():
         alias("--terminal-ansi-" + color, "--ansi-" + color, "Classic Darcula console palette; new block-terminal palette is intentionally separate upstream.")
 
     # Freeze only themeable overrides; omit unsupported/unmapped host values.
-    theme = {"id": "darcula-contrast", "name": "Darcula Contrast", "kind": "dark", "tokens": {}}
-    scheme = {"name": "Darcula Contrast", "tokens": {}}
+    theme_id = "darcula-contrast" if contrast else "islands-darcula"
+    name = "Darcula Contrast" if contrast else "Islands Darcula"
+    theme = {"id": theme_id, "name": name, "kind": "dark", "tokens": {}}
+    scheme = {"name": name, "tokens": {}}
     for token, item in entries.items():
         if item["status"] != "host-fallback":
             (scheme if item["file"] == "scheme" else theme)["tokens"][token] = item["value"]
@@ -278,22 +284,32 @@ def build():
 
 
 def render():
-    theme, scheme, entries = build()
     header = "// Modified port, Copyright 2026 longafter. SPDX-License-Identifier: Apache-2.0\n// Original colors: JetBrains; format: OpenIDEA. See NOTICE and docs/COLOR-SOURCES.md.\n// Rebuild with python3 scripts/generate.py; approximations are recorded per token.\n"
     result = {}
-    for name, data in [("theme", theme), ("scheme", scheme)]:
-        result[f"themes/darcula-contrast.{name}.json"] = header + json.dumps(data, indent=2, ensure_ascii=False) + "\n"
-    result["sources/token-provenance.json"] = json.dumps(entries, indent=2, ensure_ascii=False) + "\n"
-    lines = ["# Token mapping", "", "Generated offline by `python3 scripts/generate.py`. `mapped` preserves a verified source value and maps its role; it does not guarantee identical rendering across hosts. `approximation` projects a source value onto a different host role; `derived` is a host expression or alias; `host-fallback` is omitted from the plugin and inherits Islands Dark.", "", "| Token | Value | Status | File / key | Notes |", "| --- | --- | --- | --- | --- |"]
-    for token, item in entries.items():
-        lines.append(f"| `{token}` | `{item['value']}` | {item['status']} | `{item['source']}` · `{item['key']}` | {item['note']} |")
-    result["docs/TOKEN-MAPPING.md"] = "\n".join(lines) + "\n"
+    for contrast in [False, True]:
+        theme, scheme, entries = build(contrast=contrast)
+        theme_id = theme["id"]
+        for kind, data in [("theme", theme), ("scheme", scheme)]:
+            result[f"themes/{theme_id}.{kind}.json"] = header + json.dumps(data, indent=2, ensure_ascii=False) + "\n"
+        provenance = "darcula-contrast-token-provenance.json" if contrast else "token-provenance.json"
+        result[f"sources/{provenance}"] = json.dumps(entries, indent=2, ensure_ascii=False) + "\n"
+        ledger = "DARCULA-CONTRAST-TOKEN-MAPPING.md" if contrast else "TOKEN-MAPPING.md"
+        lines = [
+            f"# {theme['name']} token mapping", "",
+            "Generated offline by `python3 scripts/generate.py`. `mapped` preserves a verified source value and maps its role; it does not guarantee identical rendering across hosts. `approximation` projects a source value onto a different host role; `derived` is a host expression or alias; `host-fallback` is omitted from the plugin and inherits Islands Dark.", "",
+            "| Token | Value | Status | File / key | Notes |",
+            "| --- | --- | --- | --- | --- |",
+        ]
+        for token, item in entries.items():
+            lines.append(f"| `{token}` | `{item['value']}` | {item['status']} | `{item['source']}` · `{item['key']}` | {item['note']} |")
+        result[f"docs/{ledger}"] = "\n".join(lines) + "\n"
     return result
 
 
 if __name__ == "__main__":
     for path, content in render().items():
-        (ROOT / path).write_text(content)
-    theme, scheme, entries = build()
-    print(f"Generated {len(theme['tokens'])} UI + {len(scheme['tokens'])} editor tokens; "
-          f"{sum(e['status'] == 'host-fallback' for e in entries.values())} documented host fallbacks.")
+        (ROOT / path).write_text(content, encoding="utf-8")
+    for contrast in [False, True]:
+        theme, scheme, entries = build(contrast=contrast)
+        print(f"{theme['name']}: {len(theme['tokens'])} UI + {len(scheme['tokens'])} editor tokens; "
+              f"{sum(e['status'] == 'host-fallback' for e in entries.values())} documented host fallbacks.")

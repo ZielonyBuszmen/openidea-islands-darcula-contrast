@@ -5,9 +5,10 @@
     "build": "IU-262.10968.63",
     "commit": "8062c061ff33e22041d9f1844db5b8b8a6b5e4d7",
     "tag": "idea/262.10968.63",
+    "local_matches_public_byte_for_byte": true,
     "ui_theme": "Islands Darcula",
-    "editor_scheme": "Darcula Contrast → Darcula",
-    "note": "Public resources pinned to this commit. No local PhpStorm rendering comparison performed."
+    "editor_scheme": "_@user_Darcula → Darcula → Default",
+    "user_override": "INJECTED_LANGUAGE_FRAGMENT empty; not representable by host, not copied"
   },
   "openidea": {
     "version": "0.1.40",
@@ -51,6 +52,12 @@
       "url": "https://github.com/JetBrains/intellij-community/blob/8062c061ff33e22041d9f1844db5b8b8a6b5e4d7/platform/platform-resources/src/themes/expUI/expUI_darculaContrastScheme.xml",
       "sha256": "e144038b294f5a057b6f3344332d80e7fbc9324f26322559e3a47ef7f791743b",
       "license": "Apache-2.0"
+    },
+    "sources/gerry-islandsDarcula.theme.json": {
+      "url": "https://github.com/gerry-themes/islands-darcula/blob/f15cd3c5a948a14e71ebcf6587dee9803f641cd3/islandsDarcula.theme.json",
+      "sha256": "986e57c3442f16b171df82d2ac75c98488dab32fd3ed2e5e805d99162a3ccdb1",
+      "license": "Apache-2.0",
+      "note": "Third-party reference only; no authoritative priority over JetBrains data."
     }
   },
   "php_reference": {
@@ -75,5 +82,10 @@
       "DEFAULT_FUNCTION_DECLARATION"
     ],
     "platform_fallback_url": "https://github.com/JetBrains/intellij-community/blob/8062c061ff33e22041d9f1844db5b8b8a6b5e4d7/platform/core-api/src/com/intellij/openapi/editor/DefaultLanguageHighlighterColors.java"
+  },
+  "contrast": {
+    "checked_on": "2026-11-25",
+    "editor_scheme": "Darcula Contrast → Darcula",
+    "note": "Optional second theme; the original Islands Darcula output is preserved."
   }
 }

@@ -56,9 +56,9 @@
     "file": "theme"
   },
   "--bg-current-line": {
-    "value": "#2b2d30",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/CARET_ROW_COLOR",
+    "value": "#323232",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/CARET_ROW_COLOR",
     "status": "mapped",
     "note": "",
     "file": "theme"
@@ -184,9 +184,9 @@
     "file": "theme"
   },
   "--fg-gutter": {
-    "value": "#4e5157",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/LINE_NUMBERS_COLOR",
+    "value": "#606366",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/LINE_NUMBERS_COLOR",
     "status": "mapped",
     "note": "",
     "file": "theme"
@@ -328,25 +328,25 @@
     "file": "theme"
   },
   "--gutter-modified": {
-    "value": "#375fad",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/MODIFIED_LINES_COLOR",
+    "value": "#374752",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/MODIFIED_LINES_COLOR",
     "status": "mapped",
     "note": "",
     "file": "theme"
   },
   "--gutter-added": {
-    "value": "#549159",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/ADDED_LINES_COLOR",
+    "value": "#384c38",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/ADDED_LINES_COLOR",
     "status": "mapped",
     "note": "",
     "file": "theme"
   },
   "--gutter-deleted": {
-    "value": "#868a91",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/DELETED_LINES_COLOR",
+    "value": "#656e76",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/DELETED_LINES_COLOR",
     "status": "mapped",
     "note": "",
     "file": "theme"
@@ -425,8 +425,8 @@
   },
   "--syn-type": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -441,8 +441,8 @@
   },
   "--syn-function-call": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -545,40 +545,40 @@
   },
   "--syn-punct": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-variable": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-global": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-namespace": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-param": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -601,16 +601,16 @@
   },
   "--syn-python-local-variable": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-python-global-variable": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -657,24 +657,24 @@
   },
   "--syn-python-builtin": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-python-predefined-definition": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-python-predefined-usage": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -696,49 +696,49 @@
     "file": "scheme"
   },
   "--syn-php-variable": {
-    "value": "#9876aa",
-    "source": "sources/UPSTREAM.json",
-    "key": "php_reference.observed_foregrounds.PHP_VAR",
-    "status": "mapped",
-    "note": "Official PHP plugin PhpDarcula.xml: PHP_VAR and PHP_PARAMETER use #9876aa.",
+    "value": "#a9b7c6",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
+    "status": "approximation",
+    "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-php-function-call": {
-    "value": "#ffc66d",
+    "value": "#a9b7c6",
     "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
-    "key": "Darcula/attributes/DEFAULT_FUNCTION_DECLARATION/FOREGROUND",
-    "status": "mapped",
-    "note": "PHP_FUNCTION_CALL → PHP_INSTANCE_METHOD → DEFAULT_INSTANCE_METHOD → DEFAULT_FUNCTION_DECLARATION; verified in the official PHP plugin and platform fallback keys.",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
+    "status": "approximation",
+    "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-builtin": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-self": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-keyword-arg": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-predefined": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -793,8 +793,8 @@
   },
   "--syn-markup-heading": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
@@ -865,32 +865,32 @@
   },
   "--syn-bracket-1": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-bracket-2": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--syn-bracket-3": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "approximation",
     "note": "Shared host syntax category; language fallback/semantic scopes need visual calibration.",
     "file": "scheme"
   },
   "--fg-editor": {
     "value": "#a9b7c6",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/FOREGROUND",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/FOREGROUND",
     "status": "mapped",
     "note": "",
     "file": "scheme"
@@ -904,49 +904,49 @@
     "file": "scheme"
   },
   "--fg-line-number": {
-    "value": "#4e5157",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/LINE_NUMBERS_COLOR",
+    "value": "#606366",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/LINE_NUMBERS_COLOR",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--fg-line-number-current": {
-    "value": "#9da0a8",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/LINE_NUMBER_ON_CARET_ROW_COLOR",
+    "value": "#a4a3a3",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/LINE_NUMBER_ON_CARET_ROW_COLOR",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--border-gutter": {
-    "value": "#1e1f22",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/BACKGROUND",
+    "value": "#2b2b2b",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/BACKGROUND",
     "status": "approximation",
     "note": "No separate gutter border in source; merge into editor surface.",
     "file": "scheme"
   },
   "--border-indent-guide": {
-    "value": "#313438",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/INDENT_GUIDE",
+    "value": "#373737",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/INDENT_GUIDE",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--border-indent-guide-active": {
-    "value": "#6f737a",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/SELECTED_INDENT_GUIDE",
+    "value": "#505050",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/SELECTED_INDENT_GUIDE",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--border-right-margin": {
-    "value": "#393b40",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/RIGHT_MARGIN_COLOR",
+    "value": "#4d4d4d",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/RIGHT_MARGIN_COLOR",
     "status": "mapped",
     "note": "",
     "file": "scheme"
@@ -984,25 +984,25 @@
     "file": "scheme"
   },
   "--bg-matched-brace": {
-    "value": "#326146",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND",
+    "value": "#3b514d",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--matched-brace-weight": {
     "value": "700",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/MATCHED_BRACE_ATTRIBUTES/FONT_TYPE=1",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/MATCHED_BRACE_ATTRIBUTES/FONT_TYPE=1",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--bg-matched-tag": {
-    "value": "#326146",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND",
+    "value": "#3b514d",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/MATCHED_BRACE_ATTRIBUTES/BACKGROUND",
     "status": "approximation",
     "note": "Host shares brace and tag match surfaces.",
     "file": "scheme"
@@ -1089,8 +1089,8 @@
   },
   "--wave-warning": {
     "value": "#be9117",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/WARNING_ATTRIBUTES/ERROR_STRIPE_COLOR",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/WARNING_ATTRIBUTES/ERROR_STRIPE_COLOR",
     "status": "approximation",
     "note": "Source warning has background/stripe but no EFFECT_COLOR; use stripe for host wave.",
     "file": "scheme"
@@ -1112,9 +1112,9 @@
     "file": "scheme"
   },
   "--editor-warning-background": {
-    "value": "#3d3322",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/WARNING_ATTRIBUTES/BACKGROUND",
+    "value": "#52503a",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/WARNING_ATTRIBUTES/BACKGROUND",
     "status": "mapped",
     "note": "",
     "file": "scheme"
@@ -1144,9 +1144,9 @@
     "file": "scheme"
   },
   "--bg-editor-banner": {
-    "value": "#25324d",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/NOTIFICATION_BACKGROUND",
+    "value": "#1d3857",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/NOTIFICATION_BACKGROUND",
     "status": "mapped",
     "note": "",
     "file": "scheme"
@@ -2016,25 +2016,25 @@
     "file": "theme"
   },
   "--border-method-separator": {
-    "value": "#43454a",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/colors/METHOD_SEPARATORS_COLOR",
+    "value": "#4d4d4d",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/colors/METHOD_SEPARATORS_COLOR",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--bg-editor": {
-    "value": "#1e1f22",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/BACKGROUND",
+    "value": "#2b2b2b",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/BACKGROUND",
     "status": "mapped",
     "note": "",
     "file": "scheme"
   },
   "--bg-editor-gutter": {
-    "value": "#1e1f22",
-    "source": "sources/jetbrains/expUI_darculaContrastScheme.xml",
-    "key": "Darcula Contrast/attributes/TEXT/BACKGROUND",
+    "value": "#2b2b2b",
+    "source": "sources/jetbrains/DefaultColorSchemesManager.xml",
+    "key": "Darcula/attributes/TEXT/BACKGROUND",
     "status": "approximation",
     "note": "Converter uses editor background in new UI when EDITOR_GUTTER_BACKGROUND is absent; classic GUTTER_BACKGROUND is not used.",
     "file": "scheme"
